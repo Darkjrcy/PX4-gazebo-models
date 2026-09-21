@@ -96,13 +96,13 @@
       <sensor name="camera_x500" type="camera">
         <pose>0 0 0.0 0 1.5708 0</pose>
         <camera>
-          <horizontal_fov>2.00</horizontal_fov>
+          <horizontal_fov>1.20</horizontal_fov>
           <image>
             <width>720</width>
             <height>480</height>
           </image>
           <clip>
-            <near>0.16</near>
+            <near>0.175</near>
             <far>3000</far>
           </clip>
         </camera>
