@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!-- DO NOT EDIT: Generated from standard_vtol_cam_lidar.sdf.jinja -->
 <sdf version='1.10'>
   <model name='standard_vtol_cam_lidar'>
     <pose>0 0 0.246 0 0 0</pose>
@@ -131,6 +130,7 @@
       <velocity_decay/>
       <self_collide>0</self_collide>
       <sensor name="imu_sensor" type="imu">
+        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>250</update_rate>
         <imu>
@@ -678,10 +678,14 @@
     </joint>
 
 
-    <!-- Added LiDAR-->
+
+
+
+    <!-- MODIFIED CODE -->
+    <!-- Added LiDAR -->
     <include merge='true'>
       <uri>model://lidar_3d</uri>
-      <pose relative_to="base_link">0.1 0.0 0.055 0 0 0</pose>
+      <pose relative_to="base_link">0.1 0.0 -0.05 0 3.14159 0</pose>
     </include>
     <joint name="lidar_model_joint" type="fixed">
       <parent>base_link</parent>
@@ -690,9 +694,9 @@
     </joint>
 
 
-    <!-- Added Camera-->
+    <!-- Added Stereo Camera -->
     <include merge='true'>
-      <uri>model://vtol_cam</uri>
+      <uri>model://stereo_cam</uri>
       <pose relative_to="base_link">0.5 0.0 0.01 0 0 0</pose>
     </include>
     <joint name="CameraJoint" type="fixed">
@@ -700,6 +704,8 @@
       <child>camera_link</child>
       <pose relative_to="base_link">-0 0 0 0 0 0</pose>
     </joint>
+
+
 
 
 
@@ -858,6 +864,15 @@
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <rotorVelocitySlowdownSim>20</rotorVelocitySlowdownSim>
       <motorType>velocity</motorType>
+    </plugin>
+
+    <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+      <dimensions>3</dimensions>
+      <odom_publish_frequency>50</odom_publish_frequency>
+      <odom_topic>/gt/odometry</odom_topic>
+      <odom_frame>gt_world</odom_frame>
+      <robot_base_frame>gt_base_link</robot_base_frame>
+      <tf_topic>/gt/tf</tf_topic>
     </plugin>
     <static>0</static>
   </model>
