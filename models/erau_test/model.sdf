@@ -8,14 +8,14 @@
                         <cast_shadows>false</cast_shadows>
                         <geometry>
                         <mesh>
-                            <uri>model://erau_test/meshes/erau_test_visual.glb</uri>
+                            <uri>model://erau_test/meshes/erau_test_visual.gltf</uri>
                         </mesh>
                         </geometry>
                     </visual>
                     <collision name="collision">
                         <geometry>
                         <mesh>
-                            <uri>model://erau_test/meshes/erau_test_collision.glb</uri>
+                            <uri>model://erau_test/meshes/erau_test_collision.gltf</uri>
                         </mesh>
                         </geometry>
                     </collision>

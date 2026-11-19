@@ -1,0 +1,10 @@
+{
+  "model": "erau_test_visual",
+  "origin_mode": "centered_xy_world_pose_v5_terrain_repair",
+  "trees_per_hectare": 20,
+  "overlay_pipeline_version": "web_mercator_grid_v1",
+  "overlay_target_gsd_m_per_pixel": 0.3,
+  "overlay_max_texture_size_px": 8192,
+  "terrain_padding_percent": 0.0,
+  "updated_at": "2026-11-18T08:37:10-0500"
+}

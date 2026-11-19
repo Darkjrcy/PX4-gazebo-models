@@ -1,0 +1,2 @@
+Satellite imagery (c) Mapbox. Map data (c) OpenStreetMap contributors.
+If imagery is shown publicly, display the attribution in the user interface.
