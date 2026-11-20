@@ -110,7 +110,7 @@
             <real_time_update_rate>250</real_time_update_rate>
         </physics>
         <gravity>0 0 -9.8</gravity>
-        <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+        <magnetic_field>-4.46110141097e-06 2.05161729244e-05 -4.64136472274e-05</magnetic_field>
         <atmosphere type="adiabatic"/>
     </world>
     </sdf>

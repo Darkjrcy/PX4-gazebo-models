@@ -210,17 +210,17 @@
           <!-- Noise modeled after IIS2MDC -->
           <x>
             <noise type="gaussian">
-              <stddev>0.0001</stddev>
+              <stddev>3e-7</stddev>
             </noise>
           </x>
           <y>
             <noise type="gaussian">
-              <stddev>0.0001</stddev>
+              <stddev>3e-7</stddev>
             </noise>
           </y>
           <z>
             <noise type="gaussian">
-              <stddev>0.0001</stddev>
+              <stddev>3e-7</stddev>
             </noise>
           </z>
         </magnetometer>
